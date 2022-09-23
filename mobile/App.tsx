@@ -9,11 +9,13 @@ import {
 } from "@expo-google-fonts/inter";
 import { Subscription } from "expo-modules-core";
 import * as Notifications from "expo-notifications";
+import { Provider } from "react-redux";
 
 import Background from "./src/components/Background";
 import Loading from "./src/components/Loading";
 import Routes from "./src/routes";
 import { getPushNotificationToken } from "./src/services/getPushNotificationToken";
+import store from "./src/store";
 
 import "./src/services/notificationConfig";
 
@@ -64,7 +66,13 @@ const App = () => {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Routes /> : <Loading />}
+      {fontsLoaded ? (
+        <Provider store={store}>
+          <Routes />
+        </Provider>
+      ) : (
+        <Loading />
+      )}
     </Background>
   );
 };
