@@ -35,6 +35,7 @@ const Home = () => {
               username: data.username,
               avatar: data.avatar,
               id: data.id,
+              discriminator: data.discriminator,
             })
           );
           console.log("data: ", data);

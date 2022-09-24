@@ -3,4 +3,5 @@ export interface auth {
   username: string;
   avatar: string;
   id: string;
+  discriminator: string;
 }

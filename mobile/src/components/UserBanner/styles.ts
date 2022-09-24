@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     width: "100%",
     alignItems: "flex-end",
-    paddingRight: 16,
+    paddingHorizontal: 16,
   },
   content: {
     backgroundColor: THEME.COLORS.BACKGROUND_800,

@@ -11,6 +11,7 @@ const authSlice = createSlice({
       username: "",
       avatar: "",
       id: "",
+      discriminator: "",
     },
   },
   reducers: {

@@ -17,7 +17,11 @@ const UserBanner = () => {
             uri: `https://cdn.discordapp.com/avatars/${auth.id}/${auth.avatar}.png`,
           }}
         />
-        <Text style={styles.username}>{auth.username}</Text>
+        <Text
+          style={styles.username}
+          numberOfLines={1}
+          ellipsizeMode="tail"
+        >{`${auth.username}#${auth.discriminator}`}</Text>
       </View>
     </View>
   );
