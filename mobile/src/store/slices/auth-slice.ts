@@ -10,6 +10,7 @@ const authSlice = createSlice({
       token: "",
       username: "",
       avatar: "",
+      id: "",
     },
   },
   reducers: {

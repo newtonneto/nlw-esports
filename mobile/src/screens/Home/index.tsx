@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, FlatList } from "react-native";
+import { Image, FlatList, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation } from "@react-navigation/native";
 
@@ -8,6 +8,7 @@ import logoImg from "../../assets/logo-nlw-esports.png";
 import Heading from "../../components/Heading";
 import GameCard, { GameCardProps } from "../../components/GameCard";
 import Background from "../../components/Background";
+import UserBanner from "../../components/UserBanner";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -26,6 +27,8 @@ const Home = () => {
   return (
     <Background>
       <SafeAreaView style={styles.container}>
+        <UserBanner />
+
         <Image source={logoImg} style={styles.logo} />
 
         <Heading

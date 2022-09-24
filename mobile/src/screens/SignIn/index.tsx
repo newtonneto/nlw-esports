@@ -28,15 +28,17 @@ const Home = () => {
         headers: { authorization: `Bearer ${response.params.access_token}` },
       })
         .then((response) => response.json())
-        .then((data: discordDto) =>
+        .then((data: discordDto) => {
           dispatch(
             setDiscordAuth({
               token: response.params.access_token,
               username: data.username,
               avatar: data.avatar,
+              id: data.id,
             })
-          )
-        );
+          );
+          console.log("data: ", data);
+        });
     } else {
       Alert.alert("Erro no login");
     }
